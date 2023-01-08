@@ -94,7 +94,6 @@ header .navbar a {
   color: var(--font);
   font-size: 2rem;
   padding: 0 0.8rem;
-  /* margin-right:6rem; */
 }
 
 header .navbar a:hover {
