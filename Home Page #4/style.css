@@ -1,0 +1,446 @@
+/* 
+MASALAH
+1] Uba lambang arrow
+2] Tulisan di tengah, kayak design kita [https://id.pinterest.com/pin/8373949299938015/] ❎ G BISA karena width kita buat 50%
+3] Ubah warna masing-masing content => kumpul
+
+4] besk jangan terlalu fokus sama ini tapi buat juga webflow
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 6rem; */
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Ini untuk tranparan scroll bar */
+html::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Habis kita buat tranparan, kita ganti warnanya */
+/* html::-webkit-scrollbar-thumb {
+  background: #e84393;
+} */
+
+/* section {
+  padding: 5rem 9%;
+} */
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  /* border: 0.2rem solid #222; */
+  box-shadow: 0 2px 4px darkslategray;
+  background: #fff;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #2e2f33;
+  border-radius:5%;
+}
+
+/* .btn:hover {
+  color: #fff;
+  background: #00C896;
+} */
+
+/* klo btn di tekan, hover klo btn disentuh */
+.btn:active{
+  background-color: #fff;
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+}
+
+/* heading ni blm tau fungsinya */
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heading h1 {
+  font-size: 3.5rem;
+  color: #222;
+}
+
+.heading p {
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  color: #777;
+  max-width: 50rem;
+  line-height: 2;
+}
+
+/* Ni belum tau fungsinya  */
+@-webkit-keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+}
+
+/* Awalnya dia g mau transparan, taoi setelah diubah dari p.sticky => p.fixe */
+.header {
+  padding: 1rem 9%;
+  background-color: transparent;
+  /* -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+   */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: 0;
+}
+
+.header .logo img {
+  height: 5rem;
+}
+
+/* Dia y ngatur border di menu-bar */
+.header .icons div {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  background: #f5f5f5;
+  color: #222;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-left: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.header .icons div:hover {
+  background: #e84393;
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  z-index: 1010;
+  height: 100%;
+  width: 100%;
+  background: #2e2f33;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding-right: 15%;
+}
+
+.navbar.active {
+  left: 0;
+}
+
+.navbar #close-navbar {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.navbar #close-navbar:hover {
+  color: #fff;
+  background: #e84393;
+}
+
+.navbar a {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.navbar a:hover {
+  color: #e84393;
+  letter-spacing: 0.2rem;
+}
+
+.home {
+  padding: 0;
+}
+
+/* min-height disini buat bagian home makin panjang */
+.home .slide {
+  display: none;
+  min-height: 100vh;
+  /* height: calc(100vh); */
+}
+
+.home .slide.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Ini yang ngatur bagian setengah */
+.home .slide .content {
+  width: 50%;
+  padding: 2rem 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  /* background: #fce9f2; */
+  position: relative;
+}
+
+.home .slide .content.first {
+  background: #dd773d;
+}
+
+.home .slide .content.second {
+  background: #2e2f33;
+}
+
+.home .slide .content.third {
+  background:  #e84393;
+}
+
+.home .slide .content span {
+  color: #fff;
+  display: block;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  -webkit-animation: fadeUp 0.2s linear backwards 0.4s;
+  animation: fadeUp 0.2s linear backwards 0.4s;
+}
+
+.home .slide .content h3 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  color: #222;
+  -webkit-animation: fadeUp 0.2s linear backwards 0.6s;
+  animation: fadeUp 0.2s linear backwards 0.6s;
+}
+
+.home .slide .content .btn {
+  -webkit-animation: fadeUp 0.2s linear backwards 0.8s;
+  animation: fadeUp 0.2s linear backwards 0.8s;
+}
+
+/* Ngatur posisi kotak next-prev */
+.home .slide .content .controls {
+  position: absolute;
+  bottom: 12%;
+  right: -7rem;
+}
+
+/* pengaturan next-prev */
+.home .slide .content .controls div {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  background: #fff;
+  color: #222;
+  margin: 0 1rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Ngatur hover button first */
+.home .slide .content .controls.first div:hover {
+  /* background: #e84393; */
+  background: red;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Ngatur hover button sec */
+.home .slide .content .controls.second div:hover {
+  /* background: #e84393; */
+  background: green;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Ngatur hover button third */
+.home .slide .content .controls.third div:hover {
+  /* background: #e84393; */
+  background: blue;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.home .slide .image {
+  width: 50%;
+}
+
+.home .slide .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.test p {
+  background-color: yellow;
+}
+
+
+/* Media query : cosemetic website */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .home .slide .content {
+    padding: 2rem;
+  }
+  .home .slide .content span {
+    font-size: 2rem;
+  }
+  .home .slide .content h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header #search-btn {
+    display: inline-block;
+  }
+  .header .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    border-top: 0.2rem solid #222;
+    border-bottom: 0.2rem solid #222;
+    width: 100%;
+    background: #fff;
+    height: 6rem;
+    display: none;
+    -webkit-animation: fadeUp 0.2s linear backwards;
+    animation: fadeUp 0.2s linear backwards;
+  }
+  .header .search-form.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home .slide {
+    position: relative;
+    height: calc(100vh - 6rem);
+  }
+  .home .slide .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .home .slide .content img {
+    display: inline-block;
+  }
+  .home .slide .content .controls {
+    position: static;
+    margin-top: 7rem;
+  }
+  .home .slide .content .controls div {
+    margin: 0 0.5rem;
+  }
+  .home .slide .image {
+    width: 100%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
