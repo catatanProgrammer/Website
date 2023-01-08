@@ -1,14 +1,3 @@
-/* 
-MASALAH
-1] Uba lambang arrow
-2] Tulisan di tengah, kayak design kita [https://id.pinterest.com/pin/8373949299938015/] ❎ G BISA karena width kita buat 50%
-3] Ubah warna masing-masing content => kumpul
-
-4] besk jangan terlalu fokus sama ini tapi buat juga webflow
-
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
 
 * {
@@ -29,31 +18,20 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* scroll-padding-top: 6rem; */
 }
 
 html::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-/* Ini untuk tranparan scroll bar */
+
 html::-webkit-scrollbar-track {
   background: black;
 }
 
-/* Habis kita buat tranparan, kita ganti warnanya */
-/* html::-webkit-scrollbar-thumb {
-  background: #e84393;
-} */
-
-/* section {
-  padding: 5rem 9%;
-} */
-
 .btn {
   display: inline-block;
   margin-top: 1rem;
-  /* border: 0.2rem solid #222; */
   box-shadow: 0 2px 4px darkslategray;
   background: #fff;
   padding: 1rem 3rem;
@@ -63,19 +41,12 @@ html::-webkit-scrollbar-track {
   border-radius:5%;
 }
 
-/* .btn:hover {
-  color: #fff;
-  background: #00C896;
-} */
-
-/* klo btn di tekan, hover klo btn disentuh */
 .btn:active{
   background-color: #fff;
   box-shadow: 0 0 2px darkslategray;
   transform: translateY(2px);
 }
 
-/* heading ni blm tau fungsinya */
 .heading {
   text-align: center;
   margin-bottom: 4rem;
@@ -94,7 +65,6 @@ html::-webkit-scrollbar-track {
   line-height: 2;
 }
 
-/* Ni belum tau fungsinya  */
 @-webkit-keyframes fadeUp {
   0% {
     -webkit-transform: translateY(4rem);
@@ -111,12 +81,9 @@ html::-webkit-scrollbar-track {
   }
 }
 
-/* Awalnya dia g mau transparan, taoi setelah diubah dari p.sticky => p.fixe */
 .header {
   padding: 1rem 9%;
   background-color: transparent;
-  /* -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-   */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,7 +107,6 @@ html::-webkit-scrollbar-track {
   height: 5rem;
 }
 
-/* Dia y ngatur border di menu-bar */
 .header .icons div {
   height: 4.5rem;
   width: 4.5rem;
@@ -225,11 +191,9 @@ html::-webkit-scrollbar-track {
   padding: 0;
 }
 
-/* min-height disini buat bagian home makin panjang */
 .home .slide {
   display: none;
   min-height: 100vh;
-  /* height: calc(100vh); */
 }
 
 .home .slide.active {
@@ -238,7 +202,6 @@ html::-webkit-scrollbar-track {
   display: flex;
 }
 
-/* Ini yang ngatur bagian setengah */
 .home .slide .content {
   width: 50%;
   padding: 2rem 7%;
@@ -255,7 +218,6 @@ html::-webkit-scrollbar-track {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  /* background: #fce9f2; */
   position: relative;
 }
 
@@ -295,14 +257,12 @@ html::-webkit-scrollbar-track {
   animation: fadeUp 0.2s linear backwards 0.8s;
 }
 
-/* Ngatur posisi kotak next-prev */
 .home .slide .content .controls {
   position: absolute;
   bottom: 12%;
   right: -7rem;
 }
 
-/* pengaturan next-prev */
 .home .slide .content .controls div {
   height: 5rem;
   width: 5rem;
@@ -318,27 +278,23 @@ html::-webkit-scrollbar-track {
   border-radius: 50%;
 }
 
-/* Ngatur hover button first */
 .home .slide .content .controls.first div:hover {
-  /* background: #e84393; */
   background: red;
   color: #fff;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-/* Ngatur hover button sec */
+
 .home .slide .content .controls.second div:hover {
-  /* background: #e84393; */
   background: green;
   color: #fff;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-/* Ngatur hover button third */
+
 .home .slide .content .controls.third div:hover {
-  /* background: #e84393; */
   background: blue;
   color: #fff;
   -webkit-transform: scale(1.1);
@@ -361,7 +317,7 @@ html::-webkit-scrollbar-track {
 }
 
 
-/* Media query : cosemetic website */
+/* Media query */
 @media (max-width: 991px) {
   html {
     font-size: 55%;
