@@ -1,17 +1,9 @@
-/* 
-MASALAH :
-- Belum responsive, cari d mr design 
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
-/* 
-warna kayaknya cocok pake gelap-biru cerah, karena ini mainan anak
-*/
+
 :root {
-  --blue: #4e6c50; /* 607EAA*/
+  --blue: #4e6c50; 
   --bg: #1b1b1b;
   --btn: #dd8a00;
   --btn2: #8685ef;
@@ -39,16 +31,10 @@ warna kayaknya cocok pake gelap-biru cerah, karena ini mainan anak
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  /* scroll-padding-top: 6rem; */
   scroll-behavior: smooth;
-  /* background-color: var(--bg); */
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,67,134,1) 68%, rgba(81,80,147,1) 100%);
 }
 
-/* Cra hilangin scroll bar 
-body{
-  overflow: hidden;
-} */
 section {
   padding: 2rem 9%;
 }
@@ -72,7 +58,6 @@ section {
 
 /* ======================= HEADER ======================= */
 
-/* Disini pakai z-index:1000 karena kita pake fixed, biar g tabrak sama elemen lain */
 header {
   width: 100%;
   position: fixed;
@@ -101,7 +86,6 @@ header .logo span {
   color: var(--btn2);
 }
 
-/* Ngatur posisi navbar biar makin ke kanan */
 header .navbar {
   margin-right: 8rem;
 }
@@ -143,11 +127,8 @@ header .icons i:hover {
 .home {
   padding: 0;
   position: relative;
-  
-  /* background-color:white; */
 }
 
-/* disini poiinya biar home g nempel di bawah navbar */
 .home .slide-container .slide {
   min-height: 90vh;
   display: flex;
@@ -163,7 +144,6 @@ header .icons i:hover {
   animation: slideContent 0.5s linear 1s backwards;
 }
 
-/* ini yang buat tulisani datang dari samping */
 @keyframes slideContent {
   0% {
     opacity: 0;
@@ -183,7 +163,6 @@ header .icons i:hover {
   }
 }
 
-/* Gini cara buat icon atas bawah sebelah kanan */
 .home .slide-container .slide .right {
   top: 50%;
   display: grid;
@@ -228,7 +207,6 @@ header .icons i:hover {
   display: none;
 }
 
-/* selain active tersembunyi */
 .home .slide-container.active {
   display: block;
 }
@@ -238,7 +216,6 @@ header .icons i:hover {
   position: absolute;
   top: 90%;
   transform: translateY(-50%);
-  /* z-index: 100; */
   height: 5rem;
   width: 5rem;
   line-height: 2rem;
@@ -251,7 +228,6 @@ header .icons i:hover {
 .home #prev:hover,
 .home #next:hover {
   color: #fff;
-  /* background: var(--orange); */
 }
 
 .home #prev {
@@ -295,7 +271,7 @@ header .icons i:hover {
   #menu-bar {
     display: initial;
   }
-  /* Edit bagian navbar versi mobile */
+  
   header .navbar {
     position: absolute;
     top: 100%;
@@ -354,8 +330,3 @@ header .icons i:hover {
   }
 }
 
-/* 
-min-height : menentukan tinggi minimum suatu elemen. 
-ingat bahwa pengaturan min-height hanya menentukan tinggi minimum suatu elemen. Jika konten elemen melebihi tinggi minimum tersebut, elemen akan secara otomatis diperluas untuk menampung konten tersebut.
-
-*/
