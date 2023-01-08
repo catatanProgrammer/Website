@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ================ FONT AWESOME ================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- ================ CSS ================ -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- ================ NAVBAR ================ -->
+    <header class="header">
+      <a href="#home" class="logo"> <img src="logo.png" alt="" /></a>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+
+    <!-- navbar section  -->
+
+    <nav class="navbar">
+      <div id="close-navbar" class="fas fa-times"></div>
+      <a href="#home">home</a>
+      <a href="#how">How it Work</a>
+      <a href="#market">marketplace</a>
+      <a href="#about">about</a>
+    </nav>
+    
+    <!-- Akhir Navbar -->
+
+    <!-- ================ HOME ================ -->
+    <section class="home">
+      <div class="slide active">
+        <div class="content first">
+          <span>the best in their field</span>
+          <h3>service</h3>
+          <a href="#" class="btn">read more</a
+            >
+          <div class="controls first">
+            <div class="fas fa-angle-left" onclick="prev()"></div>
+            <div class="fas fa-angle-right" onclick="next()"></div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="image/img1.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="content second">
+          <span>30 day free trial</span>
+          <h3>networking</h3>
+          <a href="#" class="btn">read more</a>
+          
+          <div class="controls second">
+            <div class="fas fa-angle-left" onclick="prev()"></div>
+            <div class="fas fa-angle-right" onclick="next()"></div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="image/img2.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="content third">
+          <span>fast and save</span>
+          <h3>security</h3>
+          <a href="#" class="btn">read more</a>
+          <div class="controls third">
+            <div class="fas fa-angle-left" onclick="prev()"></div>
+            <div class="fas fa-angle-right" onclick="next()"></div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="image/img3.jpg" alt="" />
+        </div>
+      </div> 
+    </section>
+
+    <!-- home section ends -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- ================ CUSTOM JS ================ -->
+    <script src="script.js"></script>
+  </body>
+</html>
