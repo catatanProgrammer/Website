@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toys</title>
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <!--==================== CSS BUNDLE ====================-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>Ki</span>kuru</a>
+
+      <nav class="navbar">
+        <a href="#product">product</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <div class="icons">
+        <i id="search-btn">Cart</i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+    </header>
+
+    <!--==================== HOME ====================-->
+    <section class="home" id="home">
+
+      <div class="slide-container active">
+        <div class="slide">
+          <div class="content">
+            <i>$ 8.99</i>
+            <h3>game controller</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque veritatis aut laboriosam earum dolorem iste atque.</p>
+            <a href="#" class="btn">buy now</a>
+          </div>
+          <div class="image">
+    <!-- <img src="image/toy1.png" class="toy" alt="" /> -->
+          </div>
+          <div class="right">
+            <a href="#">
+              <i class="fab fa-shopify"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-shopware"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <i>$ 1.99</i>
+            <h3>video game</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque veritatis aut laboriosam earum dolorem iste atque.</p>
+            <a href="#" class="btn">buy now</a>
+          </div>
+          <div class="image">
+<!--             <img src="image/toy2.png" class="toy" alt="" /> -->
+          </div>
+
+          <div class="right">
+            <a href="#">
+              <i class="fab fa-shopify"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-shopware"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide">
+          <div class="content">
+            <i>$ 2.99</i>
+            <h3>horse swing chair</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque veritatis aut laboriosam earum dolorem iste atque.</p>
+            <a href="#" class="btn">buy now</a>
+          </div>
+          <div class="image">
+<!--             <img src="image/toy3.png" class="toy" alt="" /> -->
+          </div>
+
+          <div class="right">
+            <a href="#">
+              <i class="fab fa-shopify"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-shopware"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div id="prev" class="fas fa-arrow-alt-circle-left" onclick="prev()"></div>
+      <div id="next" class="fas fa-arrow-alt-circle-right" onclick="next()"></div>
+      
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
