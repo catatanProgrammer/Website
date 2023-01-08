@@ -1,0 +1,361 @@
+/* 
+MASALAH :
+- Belum responsive, cari d mr design 
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+/* 
+warna kayaknya cocok pake gelap-biru cerah, karena ini mainan anak
+*/
+:root {
+  --blue: #4e6c50; /* 607EAA*/
+  --bg: #1b1b1b;
+  --btn: #dd8a00;
+  --btn2: #8685ef;
+  --font: #faf7ff;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  
+}
+
+*::selection {
+  background: var(--btn2);
+  color: var(--font);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* scroll-padding-top: 6rem; */
+  scroll-behavior: smooth;
+  /* background-color: var(--bg); */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(67,67,134,1) 68%, rgba(81,80,147,1) 100%);
+}
+
+/* Cra hilangin scroll bar 
+body{
+  overflow: hidden;
+} */
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 30px;
+  border: 0.2rem solid var(--btn2);
+  font-weight: bolder;
+  font-size: 1.7rem;
+  color: var(--font);
+  cursor: pointer;
+  background: transparent;
+  padding: 0.8rem 3rem;
+}
+
+.btn:hover {
+  color: var(--btn2);
+}
+
+/* ======================= HEADER ======================= */
+
+/* Disini pakai z-index:1000 karena kita pake fixed, biar g tabrak sama elemen lain */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  border-bottom: 2px var(--btn2) solid;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #fff;
+  font-family : 'Carter One', sans-serif;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  font-family : 'Carter One', sans-serif;
+  color: var(--btn2);
+}
+
+/* Ngatur posisi navbar biar makin ke kanan */
+header .navbar {
+  margin-right: 8rem;
+}
+
+header .navbar a {
+  color: var(--font);
+  font-size: 2rem;
+  padding: 0 0.8rem;
+  /* margin-right:6rem; */
+}
+
+header .navbar a:hover {
+  color: var(--btn2);
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: var(--font);
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover {
+  color: var(--btn2);
+}
+
+#menu-bar {
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ======================= HOME ======================= */
+
+.home {
+  padding: 0;
+  position: relative;
+  
+  /* background-color:white; */
+}
+
+/* disini poiinya biar home g nempel di bawah navbar */
+.home .slide-container .slide {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 9%;
+  padding-top: 9rem;
+}
+
+.home .slide-container .slide .content {
+  flex: 1 1 39rem;
+  animation: slideContent 0.5s linear 1s backwards;
+}
+
+/* ini yang buat tulisani datang dari samping */
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}
+
+.home .slide-container .slide .image .toy {
+  width: 85%;
+  transform: rotate(-20deg);
+  animation: toy 0.3s linear;
+}
+
+@keyframes toy {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+}
+
+/* Gini cara buat icon atas bawah sebelah kanan */
+.home .slide-container .slide .right {
+  top: 50%;
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  left: 3rem;
+  animation: right 0.3s linear;
+}
+
+@keyframes right {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+}
+
+.home .slide-container .slide .right a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.home .slide-container .slide .right a:hover {
+  color: var(--btn2);
+}
+
+.home .slide-container .slide .content i {
+  font-size: 2rem;
+  color: var(--font);
+}
+
+.home .slide-container .slide .content h3 {
+  font-size: 5rem;
+  color: var(--font);
+}
+
+.home .slide-container .slide .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+.home .slide-container {
+  display: none;
+}
+
+/* selain active tersembunyi */
+.home .slide-container.active {
+  display: block;
+}
+
+.home #prev,
+.home #next {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  /* z-index: 100; */
+  height: 5rem;
+  width: 5rem;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: var(--btn2);
+  cursor: pointer;
+  text-align: center;
+}
+
+.home #prev:hover,
+.home #next:hover {
+  color: #fff;
+  /* background: var(--orange); */
+}
+
+.home #prev {
+  left: 10rem;
+}
+
+.home #next {
+  left: 14rem;
+}
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  html{
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  /* Edit bagian navbar versi mobile */
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #333;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 1000;
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #222;
+  }
+
+  .home #prev {
+    left: 7rem;
+  }
+
+  .home #next {
+    left: 10rem;
+  }
+
+  .home .slide-container .slide .image .toy {
+    position:absolute;
+    justify-content:center;
+    width: 80%;
+    top: 60%;
+    z-index: 101;
+  }
+
+  .home .slide-container .slide .right {
+    position: absolute;
+    padding-top: 50px;
+    top: 50%;
+    left: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+}
+
+/* 
+min-height : menentukan tinggi minimum suatu elemen. 
+ingat bahwa pengaturan min-height hanya menentukan tinggi minimum suatu elemen. Jika konten elemen melebihi tinggi minimum tersebut, elemen akan secara otomatis diperluas untuk menampung konten tersebut.
+
+*/
