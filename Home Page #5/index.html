@@ -1,0 +1,169 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>COFFE</title>
+     <!-- ============= FONT AWESOME ============= -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+ 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+ 
+     <!-- ============= SWIPER ============= -->
+     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+ 
+     <!-- ============= CSS ============= -->
+     <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+     <!-- ============= HEADER ============= -->
+     <header class="header">
+       <div id="menu-btn" class="fas fa-bars icons"></div>
+       <div id="search-btn" class="fas fa-search icons"></div>
+ 
+       <nav class="navbar">
+         <a href="#home">home</a>
+         <a href="#menu">menu</a>
+         <a href="#about">about</a>
+         <span class="space"></span>
+         <!--Ini tujuannya kasih ruang untuk logo-->
+         <a href="#reviews">reviews</a>
+         <a href="#contact">contact</a>
+         <a href="#blogs">blogs</a>
+       </nav>
+ 
+       <a href="#" class="fas fa-shopping-cart icons"></a>
+ 
+       <!-- put ypur logo here -->
+       <a href="#home" class="logo"><img src="assets/images/logo.png" alt="" /></a>
+ 
+       <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box" />
+         <label for="search-box" class="fas fa-search icons"></label>
+       </form>
+     </header>
+ 
+     <!-- ============= HOME ============= -->
+     <section class="home">
+       <div class="slide">
+         <div class="image">
+           <img src="home.jpg" alt="tes" />
+         </div>
+         <div class="content">
+           <h1>Start Your day with our coffe</h1>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ad harum libero numquam in modi perspiciatis corporis placeat? Modi maiores tenetur adipisci molestiae beatae omnis eum perferendis provident, veniam eius.</p>
+           <button href="#" class="btn">read more</button>
+         </div>
+       </div>
+     </section>
+ 
+     <!-- ============= CONTAINER ============= -->
+     <section class="container1">
+       <div class="heading">
+         <h1>Browse Our Hottest <br>Categories<i class="fas fa-arrow-right"></i></br></h1>
+       </div>
+       <div class="container swiper">
+         <div class="slide-container">
+           <div class="card-wrapper swiper-wrapper">
+             <!-- 1 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/ordinary.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">Originial coffe</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+             <!-- 2 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/latte.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">coffe latte</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+             <!-- 3 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/black.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">black coffe</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+             <!-- 4 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/ice.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">ice coffe</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+             <!-- 5 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/ice.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">ice coffe</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+             <!-- 6 -->
+             <div class="card swiper-slide">
+               <div class="image-box">
+<!--                  <img src="assets/images/ice.jpg" alt="" /> -->
+               </div>
+               <div class="profile-details">
+                 <div class="name-job">
+                   <h3 class="name">ice coffe</h3>
+                   <h4 class="job">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h4>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="swiper-button-next swiper-navBtn"></div>
+         <div class="swiper-button-prev swiper-navBtn"></div>
+         <div class="swiper-pagination"></div>
+       </div>
+     </section>
+ 
+ 
+
+ 
+ 
+ 
+ 
+     <!-- custom js file link      -->
+     <script src="assets/js/swiper-bundle.min.js"></script>
+     <script src="assets/js/script.js"></script>
+ 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ 
+     <script>
+       AOS.init({
+         duration: 800,
+       });
+     </script>
+   </body>
+ </html>
+ 
