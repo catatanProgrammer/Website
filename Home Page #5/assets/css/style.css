@@ -1,14 +1,4 @@
-/* 
-navbar  : #c8a482
-bg home : #fefaee
-font di navbar : #1A0000
 
-MASALAH
-- Home : besarin ukuran h1-p || atur jarak tulisan || batasin panjang p ||
-- rapiin tulisan home : https://youtu.be/2_5fA4JARQ8 
-
-- content : pake punya 
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
@@ -47,21 +37,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  /* background: url(../images/background.jpg); */
   background-attachment: fixed;
   background-position: center;
-  /* overflow-x: hidden; */
-  /* display: flex; */
+ 
 }
 
-/* section {
-  padding: 3rem 9%;
-} */
-
-/* .heading {
-  text-align: center;
-  margin-bottom: 3rem;
-} */
 
 .heading h3 {
   font-size: 3rem;
@@ -93,7 +73,6 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  /* background:#462e2a; */
   background: #c8a482;
   padding: 3rem 9%;
   display: -webkit-box;
@@ -109,7 +88,7 @@ body {
   border-bottom: 1px solid #1a0000;
 }
 
-/* merujuk ke icon font awesome */
+
 .header .icons {
   font-size: 2.5rem;
   cursor: pointer;
@@ -120,12 +99,11 @@ body {
   color: #fff;
 }
 
-/* merujuk ke icon menu mobile display*/
+
 .header #menu-btn {
   display: none;
 }
 
-/* merujuk ke daftar menu */
 .header .navbar a {
   color: #1a0000;
   font-size: 2rem;
@@ -133,18 +111,14 @@ body {
 }
 
 .header .navbar a:hover {
-  /* text-decoration: underline;
-  text-underline-offset: 1rem; */
   color: #fff;
 }
 
-/* kasih ruga ke logo */
 .header .navbar .space {
-  display: inline-block; /*ditambilkan secara blok namun memiliki sifat inline, dibuat gini biar dia bisa berada dianatar teks (kiri-kanan)*/
+  display: inline-block;
   width: 16rem;
 }
 
-/* merujuk ke logo */
 .header .logo {
   position: absolute;
   top: 1rem;
@@ -152,7 +126,6 @@ body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* display: inline-block sering digunakan untuk mengatur posisi elemen secara horizontal dalam sebuah baris */
 
 .header .logo img {
   width: 7rem;
@@ -190,7 +163,7 @@ body {
   color: #fff;
 }
 
-/* dipake dengan js */
+
 .header .fa-times {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -206,13 +179,12 @@ body {
   min-height: 100vh;
 }
 
-/* Ini yang ngatur bagian setengah */
+
 .home .slide .content {
   width: 50%;
   padding: 2rem 10%;
   display: -webkit-box;
   display: -ms-flexbox;
-  /* flex: 1 1 39rem; */
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -230,12 +202,11 @@ body {
   position: relative;
 }
 
-/* ngatur bagian tulisan */
+
 .home .slide .content h1 {
   color: #222;
   display: block;
   font-size: 3rem;
-  /* font-size: 5rem; */
   padding-bottom: 0.7rem;
   letter-spacing: 0.2rem;
   -webkit-animation: fadeUp 0.2s linear backwards 0.4s;
@@ -264,15 +235,6 @@ body {
   object-fit: cover;
 }
 
-/* ===================== CONTAINER 1 ===================== */
-
-/* UBAH :
-- cari design judul biar orang g binggung tapi tetap cocpk dengan tema (optional)
-- klo bisa ukuran card full container, inikan di tengah (optional)
-- jgn lupa pake border di card✅
-- icon di ubah kayak design biar lebih class
-*/
-
 .heading {
   text-align: left;
   margin-left:1rem;
@@ -281,13 +243,8 @@ body {
 .heading h1 {
   position: relative;
   justify-content: space-between;
-  /* font-size: 3rem; */
-  /* text-transform: uppercase; */
   color: black;
   top: 5px;
-  /* column-gap:00.5rem; */
-  /* padding: 0px 5px; */
-  /* margin: 1rem; */
 }
 
 .heading i{
@@ -295,15 +252,8 @@ body {
   
 }
 
-/* .heading a{
-  position: absolute;
-  justify-content: space-between;
-  bottom: 10px;
-  text-align: left;
-} */
 
 .container1{
-  /* min-height: 100vh; */
   display:flex;
   align-items: center;
   justify-content: center;
@@ -322,7 +272,6 @@ body {
 .slide-container {
   margin: 0 30px;
   overflow: hidden;
-  /* background: yellow; */
 }
 .card {
   background: #fff;
@@ -370,7 +319,12 @@ body {
   background-color: #000;
 }
 
-/* ===================== CONTAINER 2 ===================== */
+
+
+
+
+
+
 
 /* ===================== MEDIA QUERY ===================== */
 
@@ -378,9 +332,6 @@ body {
   .header {
     padding: 3rem;
   }
-  /* section {
-    padding: 3rem 2rem;
-  } */
 }
 
 @media (max-width: 991px) {
@@ -452,20 +403,19 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     
-     /* align-items: center; */
+     
   }
   .home .slide .content img {
     display: inline-block;
   }
   .home .slide .content h1{
     font-size:4rem;
-    /* color: #c8a482; */
     color: #F3EED9;
   }
   .home .slide .content p {
     color:#fff;
     opacity: .8;
-    /* color:#fff; */
+    
   }
   .home .slide .image {
     width: 100%;
@@ -481,4 +431,4 @@ body {
   }
   
 }
-/*# sourceMappingURL=style.css.map */
+
