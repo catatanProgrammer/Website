@@ -211,7 +211,6 @@ body{
 }
 
 .home a {
-  /* text-align: center; */
   position: relative;
   top: 7%;
   font-size: 8rem;
@@ -270,7 +269,7 @@ section:not(#section_counter) {
 }
 
 .container {
-  max-width: 112rem; /*Ini ngatur lebar biat muat*/
+  max-width: 112rem; 
   margin: 0 auto;
   padding: 0 1rem;
 }
