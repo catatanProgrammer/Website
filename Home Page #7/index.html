@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country</title>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class = "navbar">
+      <div class = "container flex">
+          <a href = "index.html" class = "site-brand">
+              Trip<span>Boss</span>
+          </a>
+
+          <button type = "button" id = "navbar-show-btn" class = "flex">
+              <i class = "fas fa-bars"></i>
+          </button>
+          <div id = "navbar-collapse">
+              <button type = "button" id = "navbar-close-btn" class = "flex">
+                  <i class = "fas fa-times"></i>
+              </button>
+              <ul class = "navbar-nav">
+                  <li class = "nav-item">
+                      <a href = "index.html" class = "nav-link">Home</a>
+                  </li>
+                  <li class = "nav-item">
+                      <a href = "gallery.html" class = "nav-link">Gallery</a>
+                  </li>
+                  <li class = "nav-item">
+                      <a href = "blog.html" class = "nav-link">Blog</a>
+                  </li>
+                  <li class = "nav-item">
+                      <a href = "about.html" class = "nav-link">About</a>
+                  </li>
+                  <li class = "nav-item">
+                      <a href = "contact.html" class = "nav-link">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <!-- end of navbar  -->
+    <!-- ============================ HOME ============================ -->
+    <section class="home">
+      <a href="#"><i class="fab fa-youtube animate__animated animate__zoomIn animate__delay-1s"></i></i></a>
+      <h1 class="animate__animated animate__zoomIn animate__delay-2s">Help For Humanity</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, Consectetur officia ut unde.</p>
+
+      <form action="">
+        <input type="search" id="email" placeholder="Your Email Address" />
+        <label for="email" class="fas fa-paper-plane"></label>
+      </form>
+    </section>    
+
+    <!-- ============================ CONTENT ============================ -->
+    <section id="section_counter">
+      <div class="container">
+        <div class="counter-grid">
+          <div class="counter-item">
+            <img src="assets/image/group (2).png" alt="Image" class="counter-img" />
+            <h1 class="counter" data-target="100">0</h1>
+            <p>Active Contributor</p>
+          </div>
+
+          <div class="counter-item">
+            <img src="assets/image/location.png" alt="Image" class="counter-img" />
+            <h1 class="counter" data-target="300">0</h1>
+            <p>Disaster location</p>
+          </div>
+          <div class="counter-item">
+            <img src="assets/image/doctor.png" alt="Image" class="counter-img" />
+            <h1 class="counter" data-target="70">0</h1>
+            <p>Professional Doctor</p>
+          </div>
+          <div class="counter-item">
+            <img src="assets/image/donor.png" alt="Image" class="counter-img" />
+            <h1 class="counter" data-target="1000">0</h1>
+            <p>Dedicated donor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- js -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
+
+
